@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.moses.nov25.Login</servlet-class>
+        <!--fully qualified class name-->
+    </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.moses.nov25.Register</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PassChange</servlet-name>
+        <servlet-class>com.moses.nov25.PassChange</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+        <!--the slash will direct to the Login servlet-->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PassChange</servlet-name>
+        <url-pattern>/PassChange</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
